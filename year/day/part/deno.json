@@ -5,6 +5,7 @@
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
     "@std/collections":"jsr:@std/collections",
-    "@std/data-structures":"jsr:@std/data-structures"
+    "@std/data-structures":"jsr:@std/data-structures",
+    "advent":"../../../advent/main.ts"
   }
 }

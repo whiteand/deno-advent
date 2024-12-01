@@ -2,4 +2,6 @@
 if (import.meta.main) {
   const fileContent = await Deno.readTextFile(Deno.args[0]).then(x => x.trim())
   console.log(fileContent)
+  const res = 0
+  console.log(`Solution: ${res}`)
 }

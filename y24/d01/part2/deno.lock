@@ -11,7 +11,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
-      "jsr:@std/collections@*"
+      "jsr:@std/collections@*",
+      "jsr:@std/data-structures@*"
     ]
   }
 }

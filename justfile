@@ -19,3 +19,13 @@ run-p2 year day:
 run-p2-example year day:
     cd ./y{{year}}/d{{day}}/part2 && deno run --watch --allow-read main.ts ../example.txt
 
+
+run year day:
+    @echo "Example 1"
+    @cd ./y{{year}}/d{{day}}/part1 && deno run --allow-read main.ts ../example.txt
+    @echo "Example 2"
+    @cd ./y{{year}}/d{{day}}/part2 && deno run --allow-read main.ts ../example.txt
+    @echo "Actual 1"
+    @cd ./y{{year}}/d{{day}}/part1 && deno run --allow-read main.ts ../input.txt
+    @echo "Actual 2"
+    @cd ./y{{year}}/d{{day}}/part2 && deno run --allow-read main.ts ../input.txt
