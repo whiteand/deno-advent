@@ -4,18 +4,18 @@ default:
 generate year day:
     mkdir ./y{{year}}
     mkdir ./y{{year}}/d{{day}}
-    echo ./y{{year}}/d{{day}}/example.txt
+    echo "" > ./y{{year}}/d{{day}}/example.txt
     cp -r ./year/day/part ./y{{year}}/d{{day}}/part1
     cp -r ./year/day/part ./y{{year}}/d{{day}}/part2
     nu fetch.nu 20{{year}} {{day}};
     cd ./y{{year}}/d{{day}}/part1 && deno run --watch --allow-read main.ts ../input.txt
 
 run-p1 year day:
-    cd ./y{{year}}/d{{day}}/part1 && deno run --watch --allow-read main.ts ../input.txt
+    cd ./y{{year}}/d{{day}}/part1 && deno run --allow-read main.ts ../input.txt
 run-p1-example year day:
     cd ./y{{year}}/d{{day}}/part1 && deno run --watch --allow-read main.ts ../example.txt
 run-p2 year day:
-    cd ./y{{year}}/d{{day}}/part2 && deno run --watch --allow-read main.ts ../input.txt
+    cd ./y{{year}}/d{{day}}/part2 && deno run --allow-read main.ts ../input.txt
 run-p2-example year day:
     cd ./y{{year}}/d{{day}}/part2 && deno run --watch --allow-read main.ts ../example.txt
 
