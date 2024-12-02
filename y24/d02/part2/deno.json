@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert",
+    "@std/collections":"jsr:@std/collections",
+    "@std/data-structures":"jsr:@std/data-structures",
+    "advent":"../../../advent/main.ts"
+  }
+}
