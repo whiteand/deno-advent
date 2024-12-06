@@ -10,6 +10,9 @@ generate year day:
     @cat ./y{{year}}/d{{day}}/input.txt
     cd ./y{{year}}/d{{day}}/part1 && deno run --watch --allow-read main.ts ../example.txt
 
+fetch year day:
+    nu fetch.nu 20{{year}} {{day}};
+
 run-p1 year day:
     cd ./y{{year}}/d{{day}}/part1 && deno run --allow-read main.ts ../input.txt
 run-p1-example year day:
