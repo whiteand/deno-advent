@@ -7,9 +7,11 @@ if (import.meta.main) {
   );
   const grid = new Grid(fileContent.split("\n").map((line) => line.split("")));
   const pos = grid.coords().find(([r, c]) => grid.get(r, c) === "^")!;
+  const { positions } = traverse(grid, [...pos], "up");
+  const candidates = [...positions].map((x) => x.split("-").map(Number));
   let total = 0;
   for (
-    const [r, c] of grid.coords().filter((p) => grid.get(p[0], p[1]) === ".")
+    const [r, c] of candidates
   ) {
     grid.set(r, c, "#");
     const { loop } = traverse(grid, [...pos], "up");
